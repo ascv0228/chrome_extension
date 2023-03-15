@@ -1,0 +1,1 @@
+redirect(url_for('url_for_a'))

@@ -1,0 +1,11 @@
+# Project exclude paths
+/dist/
+/built/
+/node_modules/
+/temp/
+/scripts/version
+/public/loadLib/
+**/__pycache__/
+
+*.tsbuildinfo
+

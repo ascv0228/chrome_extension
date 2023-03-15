@@ -1,0 +1,39 @@
+{
+	"compilerOptions": {
+        "incremental": true,
+		"strict": false,
+		"module": "commonjs",
+		"target": "es2017",
+		"esModuleInterop": true,
+		"sourceMap": false,
+		"rootDir": "src",
+		"outDir": "./built",
+		"noEmitOnError": true,
+		
+        // "incremental": true,
+        // "outDir": "./built",
+        // "skipLibCheck": true,
+        // "moduleResolution": "node",
+        // "allowJs": true,
+        // // "noEmit": true,
+        // "noEmitOnError": true,
+        // "strict": false,
+        // "esModuleInterop": true,
+        // "allowSyntheticDefaultImports": true,
+        // "target": "es2021",
+        // "removeComments": true,
+        // "module": "UMD",
+        // "noImplicitThis": true,
+		"typeRoots": [ "node_modules/@types" ]
+	},
+    "include": [
+        "./**/*"
+    ],
+    "exclude": [
+        "./webpack/webpack.config.js",
+        "node_modules",
+        "built",
+        "scripts",
+        "dist",
+    ]
+}

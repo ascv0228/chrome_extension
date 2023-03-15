@@ -1,0 +1,42 @@
+{
+    "name": "medium-extension",
+    "version": "1.0.0",
+    "description": "",
+    "main": "background.js",
+    "scripts": {
+        "build": "rmdir /S /Q dist 1> nul & webpack --config webpack/webpack.config.js && .\\scripts\\make_manifest.bat dist",
+        "build:babel": "rmdir /S /Q dist 1> nul & webpack --config webpack/webpack.config.js && .\\scripts\\make_manifest.bat dist",
+        "tsc": "rmdir /S /Q built 1> nul & tsc && Xcopy .\\public .\\built /E /H /C /I && .\\scripts\\make_manifest.bat built",
+        "typeCheck": "tsc --noEmit",
+        "http": "cd http & python app.py"
+    },
+    "child_process": false,
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@tensorflow/tfjs": "^4.2.0",
+        "babel-loader": "^9.1.2",
+        "es6-promise-promise": "^1.0.0",
+        "express": "^4.18.2",
+        "fs": "^0.0.1-security",
+        "html-webpack-plugin": "^5.5.0",
+        "import-meta-resolve": "^2.2.1",
+        "path": "^0.12.7",
+        "python-shell": "^5.0.0"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.18.6",
+        "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+        "@babel/preset-env": "^7.20.2",
+        "@babel/preset-typescript": "^7.21.0",
+        "@types/chrome": "0.0.177",
+        "copy-webpack-plugin": "^10.2.1",
+        "process": "0.11.10",
+        "ts-loader": "^9.2.6",
+        "typescript": "^4.5.4",
+        "webpack": "^5.66.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.0.0-beta.0"
+    }
+}
